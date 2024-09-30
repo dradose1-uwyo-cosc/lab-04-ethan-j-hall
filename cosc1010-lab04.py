@@ -1,8 +1,8 @@
-# Your Name Here
+# Ethan Hall
 # UWYO COSC 1010
-# Submission Date
-# Lab 03 
-# Lab Section: 
+# 09/30/2024
+# Lab 04
+# Lab Section: 14
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -99,7 +99,20 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
-# For the next part, determine the highest and lowest recorded temperatures.
+minTotal = 0
+maxTotal = 0
+for i in range(len(min_temps)):
+    minTotal += min_temps[i]
+    maxTotal += max_temps[i] 
+
+minAvg = minTotal / len(min_temps)
+maxAvg = maxTotal / len(max_temps)
+print (minAvg, maxAvg)
+
+# For the next part,  determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
-
+leastIndex = min_temps.index(min(min_temps))
+print(f"The lowest recorded temperature is {min_temps[leastIndex]} degrees.")
+maxIndex = max_temps.index(max(max_temps))
+print(f"The highest recorded temperature is {max_temps[maxIndex]} degrees.")
